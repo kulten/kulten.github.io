@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coming Soon</title>
+  <style>
+    /* Reset-ish */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #fff;
+    }
+
+    /* Background image (replace URL below) */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background-image: url('background.webp'); /* ← replace with your image path or URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+
+    /* Dark overlay to keep text readable */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+      /* backdrop-filter: blur(2px); */
+    }
+
+    header {
+      width: 100%;
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06));
+      backdrop-filter: blur(4px);
+    }
+
+    /* Logo / site name on the left */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+    .logo img {
+      height: 36px;
+      width: 36px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+
+    /* Optional right-side small text/links */
+    .header-actions {
+      font-size: 14px;
+      opacity: 0.95;
+    }
+    .header-actions a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 12px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.06);
+      transition: background 150ms ease;
+    }
+    .header-actions a:hover { background: rgba(255,255,255,0.10); }
+
+    /* Center stage */
+    .center {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 920px;
+      width: 100%;
+      padding: 48px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: 0 10px 40px rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 72px);
+      margin-bottom: 12px;
+      line-height: 0.98;
+      letter-spacing: -1px;
+    }
+
+    p.lead {
+      font-size: clamp(14px, 1.6vw, 18px);
+      opacity: 0.95;
+      margin-bottom: 22px;
+    }
+
+    .subscribe {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .subscribe input[type="email"]{
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: none;
+      min-width: 240px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .subscribe button {
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      background: linear-gradient(90deg,#ff7a59,#ff4b7a);
+      color: white;
+      box-shadow: 0 6px 18px rgba(255,75,122,0.18);
+    }
+
+    footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 18px;
+      text-align: center;
+      font-size: 13px;
+      opacity: 0.85;
+    }
+
+    /* Small screens */
+    @media (max-width: 640px) {
+      header { padding: 12px 16px; }
+      .card { padding: 28px; border-radius: 12px; }
+      .logo img { height: 30px; width: 30px; }
+      .subscribe input[type="email"] { min-width: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background layers -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="overlay" aria-hidden="true"></div>
+
+  
+
+  <main class="center" role="main">
+    <div class="card" role="region" aria-labelledby="comingTitle">
+      <h1 id="comingTitle">liil</h1>
+      <p class="lead">Coming Soon</p>
+
+      <!-- Simple email capture (no backend) -->
+  
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> liil — All rights reserved
+  </footer>
+
+  <script>
+    // Auto-year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
