@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;500;600;700&display=swap" rel="stylesheet">
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>liil</title>
@@ -8,11 +10,14 @@
     /* Reset-ish */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+
+
     html, body {
       height: 100%;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       color: #fff;
     }
+
 
     /* Background image (replace URL below) */
     .bg {
@@ -136,6 +141,13 @@
       color: white;
       box-shadow: 0 6px 18px rgba(255,75,122,0.18);
     }
+ p.lead {
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
 
     footer {
       position: absolute;
@@ -166,7 +178,7 @@
   <main class="center" role="main">
     <div class="card" role="region" aria-labelledby="comingTitle">
       <h1 id="comingTitle">liil</h1>
-      <p class="lead">Coming Soon</p>
+      <p class="lead">In Utero</p>
 
       <!-- Simple email capture (no backend) -->
   
